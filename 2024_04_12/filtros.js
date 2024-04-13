@@ -34,6 +34,7 @@ const bilateralFilteredImg = img.bilateralFilter(
 
 // Converte a imagem para escala de cinza
 const grayImg = img.cvtColor(cv.COLOR_BGR2GRAY);
+
 // Aplica o filtro de limiar adaptativo
 const adaptiveThresholdedImg = grayImg.adaptiveThreshold(
     /* maxValue */ 255,                     // Valor máximo atribuído aos pixels que passam pelo limiar
@@ -43,9 +44,21 @@ const adaptiveThresholdedImg = grayImg.adaptiveThreshold(
     /* C */ 2                               // Constante subtraída do resultado do cálculo do limiar adaptativo
 );
 
+// Equaliza a imagem 
+// Redistribui os valores de intensidade dos pixels de uma imagem de forma que a distribuição de intensidades seja mais uniforme.
+const equalizedImg = grayImg.equalizeHist();
+
+
+// Contraste +++ e ---
+
+// Saturação +++ e ---
+
+
 
 // Salva as imagens processadas
 cv.imwrite(`${dir_result}/2_pessoas_blurred.jpeg`, blurredImg);
+cv.imwrite(`${dir_result}/2_pessoas_saturated.jpeg`, saturatedImg);
+cv.imwrite(`${dir_result}/2_pessoas_equalize_hist.jpeg`, equalizedImg);
 cv.imwrite(`${dir_result}/2_pessoas_median_blurred.jpeg`, medianBlurredImg);
 cv.imwrite(`${dir_result}/2_pessoas_gaussian_blurred.jpeg`, gaussianBlurredImg);
 cv.imwrite(`${dir_result}/2_pessoas_bilateral_filtered.jpeg`, bilateralFilteredImg);
