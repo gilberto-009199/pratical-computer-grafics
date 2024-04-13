@@ -1,0 +1,65 @@
+    1  npm init
+    2  touch index.js
+    3  git add -A
+    4  git commit -m "inicio do projeto"
+    5  git push origin main
+    6  npm install --save opencv4nodejs
+    7  sudo apt install opencv
+    8  sudo apt search opencv
+    9  sudo apt install node-opencv
+   10  npm install --save opencv4nodejs
+   11  npm install --save opencv
+   12  npm install -g node-gyp
+   13  npm install --save opencv4nodejs
+   14  node-gyp init
+   15  node-gyp install
+   16  node-gyp install opencv4nodejs
+   17  node index.js 
+   18  node-gyp index.js 
+   19  node-gyp 2024_04_12/
+   20  node-gyp 2024_04_12/exemplo.js 
+   21  node 2024_04_12/exemplo.js 
+   22  npm install opencv4nodejs
+   23  node-gyp build 2024_04_12/exemplo.js 
+   24  node-gyp configure
+   25  node-gyp 
+   26  node-gyp install opencv4nodejs
+   27  node-gyp build 2024_04_12/exemplo.js 
+   28  node index.js 
+   29  node-gyp build
+   30  sudo apt search opencv
+   31  sudo apt search python3-opencv node-opencv/jammy
+   32  sudo apt install python3-opencv node-opencv/jammy
+   33  sudo apt update
+   34  sudo apt install python3-opencv node-opencv/jammy
+   35  node index.js 
+   36  npm install opencv4nodejs
+   37  npm install -g node-gyp
+   38  npm install opencv4nodejs
+   39  rmdir '/workspace/processamento_imagem/node_modules/opencv-build'
+   40  rm -Rf '/workspace/processamento_imagem/node_modules/opencv-build'
+   41  npm install opencv4nodejs
+   42  rm -Rf build/
+   43  npm install opencv4nodejs
+   44  node index.js 
+   45  npm install opencv4nodejs
+   46  node-gyp install opencv4nodejs
+   47  node-gyp configure
+   48  node-gyp install opencv4nodejs
+   49  npm install opencv4nodejs
+   50  node index.js 
+   51  npm i opencv4nodejs-prebuilt-install
+   52  node index.js 
+   53  cd img/
+   54  wget https://portalpadrao.ufma.br/grajau/campus/pessoas.jpg/@@images/f2bde993-ea7e-4ec9-9eda-ed2ab222c45e.jpeg
+   55  rename f2bde993-ea7e-4ec9-9eda-ed2ab222c45e.jpeg 2_pessoas.jpeg
+   56  mv f2bde993-ea7e-4ec9-9eda-ed2ab222c45e.jpeg 2_pessoas.jpeg
+   57  owd
+   58  pwd
+   59  node index.js 
+   60  cd ..
+   61  node index.js 
+   62  install libgtk2.0-dev
+   63  node index.js 
+   64  node 2024_04_12/aplicar_filtros.js 
+   65  history 100 > howinit.history.txt
