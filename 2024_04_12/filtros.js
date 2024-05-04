@@ -57,7 +57,7 @@ const equalizedImg = grayImg.equalizeHist();
 
 // Salva as imagens processadas
 cv.imwrite(`${dir_result}/2_pessoas_blurred.jpeg`, blurredImg);
-cv.imwrite(`${dir_result}/2_pessoas_saturated.jpeg`, saturatedImg);
+//cv.imwrite(`${dir_result}/2_pessoas_saturated.jpeg`, saturatedImg);
 cv.imwrite(`${dir_result}/2_pessoas_equalize_hist.jpeg`, equalizedImg);
 cv.imwrite(`${dir_result}/2_pessoas_median_blurred.jpeg`, medianBlurredImg);
 cv.imwrite(`${dir_result}/2_pessoas_gaussian_blurred.jpeg`, gaussianBlurredImg);
