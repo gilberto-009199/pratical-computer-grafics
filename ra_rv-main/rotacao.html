@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+    <head>
+        <META charset="utf-8"/>
+
+        <link rel="stylesheet" href="./assets/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/jquery-ui.min.css">
+        <link rel="stylesheet" href="./assets/default.min.css">
+        <link rel="stylesheet" href="./assets/style.css" />
+        
+    </head>
+    <body>
+        <style>
+            canvas{
+                margin-top: 57px;
+            }
+        </style>
+        <nav class="navbar navbar-dark bg-dark  navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                202401 - CC 6A NOITE
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar">
+                </form>
+            </div>
+        </nav>
+        <div class="container-fluid" style="padding-top: 10px;">
+          <div class="row">
+
+			<div class="col-md-3 col-lg-2">    
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        Implementações:
+                    </div>
+                    <div class="card-body">
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="index.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">line(x1, y1, x2, y2, color)</h6>
+                                    <small></small>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Algoritmo simples para conversão matricial de retas. E pouco eficiente pois utiliza cálculos de ponto flutuante.
+                                </p>
+                                <small>void line(int x1, int y1, int x2, int y2, int color)</small>
+                            </a>
+                        </div>
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="reta_ponto_medio.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">inc_line(x1, y1, x2, y2, color)</h6>
+                                    <small></small>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Algoritmo de Ponto Medio Reta (também chamado de algoritmo de Bresenham) baseia-se no argumento de que um segmento de reta, ao ser plotado, deve ser contínuo, ou melhor, os pixels que compõem um segmento de reta devem ser vizinhos.
+                                </p>
+                                <small>void inc_line(int x1, int y1, int x2, int y2, int color)</small>
+                            </a>
+                        </div>
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="curva_ponto.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        CirclePoints(x, y, color);<br/>
+                                        MidPointCircle(r, color);
+                                    </h6>
+                                    <small></small>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Algoritmo de traçado de curva
+                                </p>
+                                <small>void CirclePoints(int x, int y, int color);</small>
+                                <br/>
+                                <small>void MidPointCircle(int r, int color);</small>
+                            </a>
+                        </div>
+                        
+                        <div class="list-group bg-dark text-white">
+                            <a href="translacao.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        Translação(dx, dy)
+                                    </h6>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Move uma poligono, com base em uma distancia.
+                                    \[ x_{novo} = { x_{original} + dx } \]
+                                    \[ y_{novo} = { y_{original} + dy } \]
+                                </p>
+                                <small>void Translacao(int dx, int dy);</small>
+                            </a>
+                        </div>
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="escala.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        Escala(x, y, sx, sy, xc, yc)
+                                    </h6>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Escala um poligono, baseado em um fator de escala.
+                                    O ponto central padrão e o (0,0).
+                                    \[ x_{novo} = { x_{centro} + (x_{original} - x_{centro}) sx} \]
+                                    \[ y_{novo} = { y_{centro} + (y_{original} - y_{centro}) sy} \]
+                                </p>
+                                <small>void Escala(int x, in y, int sx, int sy, int xc, int yc);</small>
+                            </a>
+                        </div>
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="rotacao.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        Rotacao(x, y, rotacao, xc, yc)
+                                    </h6>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Rotacionar um poligono.
+                                    Ponto em relação a rotação, o padrão e (0,0).
+                                    \begin{split} 
+                                        \theta &= rotacao (°) \\
+                                        x_{diff} &= { x_{original} - ( 0 - x_{centro}) } \\
+                                        y_{diff} &= { y_{original} - ( 0 - y_{centro}) } \\
+                                        
+                                        x' &= { x_{diff} \cos(\theta) - x_{diff} \sin(\theta) } \\
+                                        y' &= { y_{diff} \sin(\theta) + y_{diff} \cos(\theta) } \\
+
+                                        x'' &= { x' + x_{centro}} \\
+                                        y'' &= { y' + y_{centro}} \\
+                                    \end{split}
+                                </p>
+                                <small>void Rotacao(int x, in y, int rotacao, int xc, int yc);</small>
+                            </a>
+                        </div>
+
+                        <div class="list-group bg-dark text-white">
+                            <a href="matriz.html" class="bg-dark text-white list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        Matrizes Operações
+                                    </h6>
+                                </div>
+                                <p class="mb-1 text-white" style="font-size: 0.8em;">
+                                    Matrix de Translação, Escala, Rotação, Espelhamento e Cisalhamento.
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-9 col-lg-10">
+
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        Escala:
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h2 class="mb-4">Formulário de Escala:</h2>
+                                <form id="frm">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label for="point2X">Ponto da rotação em X(max: 34):</label>
+                                                <input type="number" min="-34" max="34" class="form-control form-control-sm" name="xc" value="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label for="point2Y">Ponto da rotação em Y(max: 34):</label>
+                                                <input type="number" min="-34" max="34" class="form-control form-control-sm" name="yc" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="point2X">Rotação ao redor do Ponto:</label>
+                                                <input type="number" min="1" max="360" class="form-control form-control-sm" name="rotate" value="45">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="draw(document.querySelector('#frm'))">Desenhar</button>
+                                    <button type="button" class="btn btn-danger" onclick="util.canvas.load()">Resetar</button>
+                                </form>
+                            </div>
+                            <div class="col-sm-4">
+                                <canvas id="meuCanvas" width="70" height="70"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        Matrix (Pixels: <string id="pixelMatrix"></string>):
+                    </div>
+                    <div class="card-body" style="padding: 5px;">
+                        <div class="matrix">
+                        </div>
+                    </div>
+                    <style>
+                        
+                    </style>
+                </div>
+
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        Codigos:
+                    </div>
+                    <div class="card-body ">
+                        <h4>Matematica:</h4>
+                        <p>
+                            \begin{split} 
+                                \theta &= rotacao (°) \\
+                                x_{diff} &= { x_{original} - ( 0 - x_{centro}) } \\
+                                y_{diff} &= { y_{original} - ( 0 - y_{centro}) } \\
+                                
+                                x' &= { x_{diff} \cos(\theta) - x_{diff} \sin(\theta) } \\
+                                y' &= { y_{diff} \sin(\theta) + y_{diff} \cos(\theta) } \\
+
+                                x'' &= { x' + x_{centro}} \\
+                                y'' &= { y' + y_{centro}} \\
+                            \end{split}
+                        </p>
+                        <h4>JavaScript</h4>
+                        <pre><code class="javascript mycode"></code></pre>
+                    </div>
+                </div>
+                
+            </div>
+		  </div>
+        </div>
+        
+        <script src="./assets/jquery-3.3.1.min.js"></script>
+        <script src="./assets/popper.min.js"></script>
+        <script src="./assets/bootstrap.min.js"></script>
+        <script src="./assets/jquery-ui.min.js"></script>
+        <script src="./assets/highlight.min.js"></script>
+        <script async src="./assets/tex-mml-chtml.min.js"></script>
+        <script src="./util.js"></script>
+        <script>
+            function rotate(x, y, rotateEmGraus, xc = 0, yc = 0, color = 'blue') {
+                // Converte o ângulo de graus para radianos
+                let radianos = rotateEmGraus * Math.PI / 180;
+
+                // Calcula o seno e o cosseno do ângulo
+                let seno = Math.sin(radianos);
+                let coseno = Math.cos(radianos);
+
+                // Calcula as novas coordenadas após a rotação
+                let x_novo = coseno * (x - xc) - seno * (y - yc) + xc;
+                let y_novo = seno   * (x - xc) + coseno * (y - yc) + yc;
+
+                util.canvas.write_pixel(Math.round(x_novo), Math.round(y_novo), color);
+            }
+            function draw(frm){
+
+                var formData = $(frm).serializeArray();
+
+                var xc = parseFloat(formData.find(item => item.name === "xc").value) || 0;
+                var yc = parseFloat(formData.find(item => item.name === "yc").value) || 0;
+
+                var rotateEmGraus = parseFloat(formData.find(item => item.name === "rotate").value) || 1;
+                
+
+                $('.cell[title][data-value="1"]').each(function() {
+                    let [x, y] = $(this).attr('data-cordenada').split(',')
+                    rotate(x*1, y*1, rotateEmGraus, xc, yc);
+                });
+
+            }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {$('.mycode').html('\t'+rotate.toString());})
+            document.addEventListener('DOMContentLoaded', (event) => {
+                hljs.highlightAll(); 
+                // Inicializa todos os tooltips
+                var tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                var tooltipList = tooltips.map(function (tooltipEl) {
+                    return new bootstrap.Tooltip(tooltipEl);
+                });
+
+                var availableText = [];
+                var availableLink = [];
+                // Iterar sobre os links encontrados e adicionar cada um deles como um item na lista de tags
+                $('.list-group a[href]').each(function() {
+                    let linkText = $(this).find('h6').html() +'<br>'+ $(this).find('p').html();
+                    availableText.push(linkText.trim());
+                    availableLink.push(this);
+                });
+
+                $('input[type="search"]').autocomplete({
+                    source: availableText,
+                    minLength: 0,
+                    select: function(event, ui) {
+                        let selectedIndex = availableText.indexOf(ui.item.label);
+                        let selecionado = $(availableLink[selectedIndex]);
+                        
+                        $('input[type="search"]').val(selecionado.find('h6').text().trim());
+                        
+                        selecionado[0].click()
+                        
+                    }
+                }).on('focus', function() {
+                    $(this).autocomplete('search');
+                    
+                });
+                // Função para renderizar quebra de linha na lista de sugestões
+                $.ui.autocomplete.prototype._renderItem = function(ul, item) {
+                    return $('<li>')
+                    .append($('<div>').html(item.label))
+                    .appendTo(ul);
+                };
+                util.canvas.load()
+            })
+        </script>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+
+                // Exemplo de uso
+                // Quadrado
+                let dx = 9, dy = 9;
+                util.canvas.write_pixel(2 + dx,  2 + dy, 'blue');
+                util.canvas.write_pixel(2 + dx,  1 + dy, 'blue');
+                util.canvas.write_pixel(2 + dx,  0 + dy, 'blue');
+                util.canvas.write_pixel(2 + dx, -1 + dy, 'blue');
+                util.canvas.write_pixel(2 + dx, -2 + dy, 'blue');
+
+                util.canvas.write_pixel( 1 + dx, 2 + dy, 'blue');
+                util.canvas.write_pixel( 0 + dx, 2 + dy, 'blue');
+                util.canvas.write_pixel(-1 + dx, 2 + dy, 'blue');
+
+                util.canvas.write_pixel(-2 + dx,  2 + dy, 'blue');
+                util.canvas.write_pixel(-2 + dx,  1 + dy, 'blue');
+                util.canvas.write_pixel(-2 + dx,  0 + dy, 'blue');
+                util.canvas.write_pixel(-2 + dx, -1 + dy, 'blue');
+                util.canvas.write_pixel(-2 + dx, -2 + dy, 'blue');
+                
+                util.canvas.write_pixel( 1 + dx, -2 + dy, 'blue');
+                util.canvas.write_pixel( 0 + dx, -2 + dy, 'blue');
+                util.canvas.write_pixel(-1 + dx, -2 + dy, 'blue');
+            });
+            
+        </script>
+        
+    </body>
+</html>

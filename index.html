@@ -1,58 +1,83 @@
+<!doctype html>
 <html>
- <head>
-  <link
-    rel="stylesheet"
-    data-name="vs/editor/editor.main"
-    href="assets/monaco_editor/min/vs/editor/editor.main.css"
-  />
-  <script src="https://docs.opencv.org/3.4/opencv.js"></script>
-   <!-- OR ANY OTHER AMD LOADER HERE INSTEAD OF loader.js -->
-  <script src="assets/monaco_editor/min/vs/loader.js"></script>
-	<script src="assets/monaco_editor/min/vs/editor/editor.main.nls.js"></script>
-	<script src="assets/monaco_editor/min/vs/editor/editor.main.js"></script>
- </head>
- <body>
-   
-  <div class="inputoutput">
-   <img id="imageSrc" alt="No Image" />
-   <div class="caption">
-      imageSrc
-      <input type="file" id="fileInput" name="file" />
-   </div>
-  </div>
-  <canvas id="outputCanvas"></canvas>
-  <script type="text/javascript">
-    let imgElement = document.getElementById("imageSrc")
-    let inputElement = document.getElementById("fileInput");
-    inputElement.addEventListener("change", (e) => {
-     imgElement.src = URL.createObjectURL(e.target.files[0]);
-    }, false);
-    imgElement.onload = function() {
-     let mat = cv.imread(imgElement);
-     
-     let src = mat//cv.imread('canvasInput');
-     let dst = new cv.Mat();
-     // You can try more different parameters
-     cv.threshold(src, dst, 177, 200, cv.THRESH_BINARY);
-     cv.imshow("outputCanvas", dst);
-     src.delete();
-     dst.delete();
-    }
-  </script>
+    <head>
+        <META charset="utf-8"/>
 
-  <h2>Monaco Editor Sample</h2>
-  <div id="container" style="width: 800px; height: 600px; border: 1px solid grey"></div>
+        <link rel="stylesheet" href="./assets/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/jquery-ui.min.css">
+        <link rel="stylesheet" href="./assets/default.min.css">
+        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" data-name="vs/editor/editor.main" href="assets/monaco_editor/min/vs/editor/editor.main.css"/>
+        <script src="assets/opencv.js"></script>
+        <!-- OR ANY OTHER AMD LOADER HERE INSTEAD OF loader.js -->
+        <script src="assets/monaco_editor/min/vs/loader.js"></script>
+        <script src="assets/monaco_editor/min/vs/editor/editor.main.nls.js"></script>
+        <script src="assets/monaco_editor/min/vs/editor/editor.main.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                202401 - CC 6A NOITE
+            </a>
 
-  
-  <script>
-    require.config({ paths: { vs: 'assets/monaco_editor/min/vs' } });
+        </nav>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="inputoutput">
+                    <img id="imageSrc" alt="No Image" />
+                    <div class="caption">
+                      imageSrc
+                      <input type="file" id="fileInput" name="file" />
+                    </div>
+                  </div>
+                  <canvas id="outputCanvas"></canvas>
+                          
+                  <h2>Monaco Editor Sample</h2>
+                  <div id="container" style="width: 800px; height: 600px; border: 1px solid grey"></div>
+                
+              </div>
+            </div>
+        </div>
+        
+        
+    <script type="text/javascript">
+          let imgElement = document.getElementById("imageSrc")
+          let inputElement = document.getElementById("fileInput");
+          inputElement.addEventListener("change", (e) => {
+            imgElement.src = URL.createObjectURL(e.target.files[0]);
+          }, false);
+          imgElement.onload = function() {
+            let mat = cv.imread(imgElement);
+            
+            let src = mat//cv.imread('canvasInput');
+            let dst = new cv.Mat();
+            // You can try more different parameters
+            cv.threshold(src, dst, 177, 200, cv.THRESH_BINARY);
+            cv.imshow("outputCanvas", dst);
+            src.delete();
+            dst.delete();
+          }
+    </script>
+    <script>
+          require.config({ paths: { vs: 'assets/monaco_editor/min/vs' } });
+      
+          require(['vs/editor/editor.main'], function () {
+            var editor = monaco.editor.create(document.getElementById('container'), {
+              value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+              language: 'javascript'
+            });
+          });
+    </script>
+    <script>
+          require.config({ paths: { vs: 'assets/monaco_editor/min/vs' } });
 
-    require(['vs/editor/editor.main'], function () {
-      var editor = monaco.editor.create(document.getElementById('container'), {
-        value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
-        language: 'javascript'
-      });
-    });
-  </script>
- </body>
+          require(['vs/editor/editor.main'], function () {
+            var editor = monaco.editor.create(document.getElementById('container'), {
+              value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+              language: 'javascript'
+            });
+          });
+    </script>
+  </body>
 </html>
