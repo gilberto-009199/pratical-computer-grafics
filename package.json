@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "monaco-editor": "^0.48.0",
     "opencv4nodejs-prebuilt-install": "^4.1.202"
   }
-
 }
